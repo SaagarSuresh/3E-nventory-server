@@ -44,6 +44,7 @@ module.exports = [
         name: 'Bubbly - Champagne'
     },
     {
+        id: 'cadc66b1-8b45-4499-a44d-fa02f1e01a04',
         name: 'Algonquin - Almond Butter'
     },
     {
