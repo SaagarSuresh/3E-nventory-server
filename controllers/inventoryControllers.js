@@ -81,4 +81,18 @@ const postNewItem = (req, res) => {
     });
   };
 
-module.exports = {getInventoryList, getInventoryItem, getInventory, postNewItem, editInventoryItem}
+  const deleteInventoryItem = (req, res) =>{
+    knex
+      .select("*")
+        .from("inventory")
+        .where({id:req.params.itemId})
+        .del()
+        .then((data) => {
+            res.sendStatus(204).send("This has been deleted.");
+        })
+        .catch(() =>{
+          res.status(404).send("Error deleting inventory item.");
+        })
+  }
+
+module.exports = {getInventoryList, getInventoryItem, getInventory, postNewItem, editInventoryItem, deleteInventoryItem}
