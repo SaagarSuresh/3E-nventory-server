@@ -69,4 +69,16 @@ const postNewItem = (req, res) => {
       );
   };
 
-module.exports = {getInventoryList, getInventoryItem, getInventory, postNewItem}
+  const editInventoryItem = (req, res) =>{
+    knex("inventory")
+      .where({id: req.params.itemId})
+      .update(req.body)
+      .then((rowsUpdated)=>{
+        res.json(rowsUpdated);
+      })
+      .catch((error)=>{
+        res.status(400).send("Error updating inventory item.");
+    });
+  };
+
+module.exports = {getInventoryList, getInventoryItem, getInventory, postNewItem, editInventoryItem}
