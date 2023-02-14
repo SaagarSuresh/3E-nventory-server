@@ -36,10 +36,10 @@ const getInventory = (req, res) => {
 
 const getTruffleList = (req, res) => {
   knex
-      .select("truffle.*")
+      .select("name")
       .from("truffle")
-      .then((truffleList) =>{
-          res.json(truffleList);
+      .then((inventory) =>{
+          res.json(inventory);
       })
       .catch((error) =>{
           console.log(error);
