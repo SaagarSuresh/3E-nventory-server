@@ -34,6 +34,19 @@ const getInventory = (req, res) => {
         });
 };
 
+const getTruffleList = (req, res) => {
+  knex
+      .select("truffle.*")
+      .from("truffle")
+      .then((truffleList) =>{
+          res.json(truffleList);
+      })
+      .catch((error) =>{
+          console.log(error);
+          res.status(404).send("Error retrieving inventory list");
+      });
+};
+
 const getInventoryItem = (req, res) => {
     knex
         .select("inventory.*", "truffle.name as truffle_name")
@@ -95,4 +108,4 @@ const postNewItem = (req, res) => {
         })
   }
 
-module.exports = {getInventoryList, getInventoryItem, getInventory, postNewItem, editInventoryItem, deleteInventoryItem}
+module.exports = {getInventoryList, getInventoryItem, getInventory, postNewItem, editInventoryItem, deleteInventoryItem, getTruffleList}
