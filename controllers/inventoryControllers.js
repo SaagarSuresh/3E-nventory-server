@@ -36,7 +36,7 @@ const getInventory = (req, res) => {
 
 const getTruffleList = (req, res) => {
   knex
-      .select("name")
+      .select("*")
       .from("truffle")
       .then((inventory) =>{
           res.json(inventory);
