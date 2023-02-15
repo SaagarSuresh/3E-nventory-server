@@ -101,8 +101,6 @@ const postNewItem = (req, res) => {
         .where({id:req.params.itemId})
         .del()
         .then((data) => {
-          console.log("then")
-          console.log(data)
           if(data){
             res.status(204).send("This has been deleted.");
           }
