@@ -35,9 +35,9 @@ module.exports = [
         id: '4b6a7565-077e-4595-a317-c53095fd5dad',
         store_id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
         truffle_id: 'e202e167-d242-4d7f-b8fc-68caffef9e01',
-        minimum_truffles_in_container: 0,
-        truffles_in_container: 0,
-        truffles_sold: 0
+        minimum_truffles_in_container: 20,
+        truffles_in_container: 27,
+        truffles_sold: 3
     },
     {
         id: '9abbf2d2-45d5-463c-8429-ca5454d971d4',
@@ -59,9 +59,9 @@ module.exports = [
         id: '462e4097-ae85-4771-ba42-d28393e39e03',
         store_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
         truffle_id: 'bdc6bb69-e09c-498d-8abd-be2792504d00',
-        minimum_truffles_in_container: 0,
-        truffles_in_container: 0,
-        truffles_sold: 0
+        minimum_truffles_in_container: 30,
+        truffles_in_container: 45,
+        truffles_sold: 10
     },
     {
         id: 'ae986f59-8c40-480c-bd28-ee6068cd3617',
